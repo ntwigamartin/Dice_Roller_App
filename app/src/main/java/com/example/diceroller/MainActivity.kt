@@ -44,6 +44,15 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun DiceRollerApp() {
+    DiceWithButtonAndImage(modifier = Modifier
+        .fillMaxSize()
+        .wrapContentSize(Alignment.Center)
+    )
+}
+
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     var result by remember { mutableStateOf(1) }
@@ -71,11 +80,3 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DiceRollerApp() {
-    DiceWithButtonAndImage(modifier = Modifier
-        .fillMaxSize()
-        .wrapContentSize(Alignment.Center)
-    )
-}
